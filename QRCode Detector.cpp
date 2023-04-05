@@ -8,14 +8,15 @@ using namespace std;
 using namespace cv;
 using namespace zbar;
 
-int main(int argc, char* argv[])
+void DetectQR(int argc, char* argv[])
 {
     // Open the camera
     VideoCapture cap(0);
     if (!cap.isOpened()) {
         cerr << "Failed to open the camera." << endl;
-        return -1;
+        return;
     }
+    
     namedWindow("QRCode Detector", cv::WINDOW_NORMAL);
     resizeWindow("QRCode Detector", 640, 480);
 
@@ -66,7 +67,5 @@ int main(int argc, char* argv[])
             break;
         }
     }
-
-    return 0;
 }
 
