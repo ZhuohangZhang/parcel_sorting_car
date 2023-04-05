@@ -8,7 +8,7 @@ using namespace std;
 using namespace cv;
 using namespace zbar;
 
-void DetectQR(int argc, char* argv[])
+void DetectQR()
 {
     // Open the camera
     VideoCapture cap(0);
